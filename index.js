@@ -13,5 +13,9 @@ app.get('/playlist/:id', ((req, res) => {
     res.json({response: "specific playlist by id"})
 }));
 
+app.get('/list', (req, res) => {
+    res.json({response: "this is a list of objects"})
+});
+
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
