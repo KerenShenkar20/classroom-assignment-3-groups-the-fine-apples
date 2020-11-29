@@ -9,4 +9,9 @@ app.post('/addLanguage',(req,res)=>{res.status(200).send("language added, let's 
     Student A writes the route for GET /playlist
     and student B writes the route for PUT /language */
 
+app.get('/playlist/:id', ((req, res) => {
+    res.json({response: "specific playlist by id"})
+}));
+
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
