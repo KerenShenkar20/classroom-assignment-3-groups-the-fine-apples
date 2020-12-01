@@ -16,6 +16,9 @@ app.get('/playlist/:id', ((req, res) => {
 app.get('/list', (req, res) => {
     res.json({response: "this is a list of objects"})
 });
+app.put('/list/:songName', (req, res) => {
+    res.status(200).json({response: `Update - the song name is ${req.body.songName}`});
+});
 
 app.all('*',(req, res) => {
     res.status(404).json({"Error": "Page not found"})
