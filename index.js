@@ -17,5 +17,10 @@ app.get('/list', (req, res) => {
     res.json({response: "this is a list of objects"})
 });
 
+app.all('*',(req, res) => {
+    res.status(404).json({"Error": "Page not found"})
+});
+
+
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
